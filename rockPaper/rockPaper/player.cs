@@ -8,9 +8,36 @@ namespace rockPaper
 {
     class player
     {
-        // should have name: Player 1,player 2,Bot.
-        // should have the ability to throw theire hand:rock,paper,scisors,lizzard,spock  
-        // 
+        List<string> actions;
 
+        public string  Actions()
+        {
+            actions = new List<string>() { "rock", " paper", "scisors", "lizzard", "spock" };
+            Console.WriteLine("what action would you like to take?"){
+                string input = Console.ReadLine();
+                switch (input)
+                {
+                    case "rock":
+                        return actions[0];
+                        
+
+                    case "pper":
+                        return actions[1];
+                        
+                    case "scisors":
+                        return actions[2];
+                       
+                    case "lizzard":
+                        return actions[3];
+                    case "spock":
+                        return actions[4];
+                    default:
+                        return Actions();
+                }
+            
+            
+            //List<string> menu;
+            //constructor
+        }   
     }
 }
