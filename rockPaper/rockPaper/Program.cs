@@ -10,6 +10,9 @@ namespace rockPaper
     {
         static void Main(string[] args)
         {
+                    game RockPaper = new game();
+                   
+             
         }
     }
 }
