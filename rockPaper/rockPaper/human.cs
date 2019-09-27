@@ -32,10 +32,10 @@ namespace rockPaper
 
                     return Paper;
 
-                case "scisors":
+                case "scissors":
                     return Scisors;
 
-                case "lizzard":
+                case "lizard":
                     return Lizzard;
 
                 case "spock":

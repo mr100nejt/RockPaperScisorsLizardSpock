@@ -16,7 +16,7 @@ namespace rockPaper
         {
             LoseID1 = " Rock";
             LoseID2 = " Spock";
-            ID = " Scisors";
+            ID = " Scissors";
             IDList = new List<string>() { ID, LoseID1, LoseID2 };
         }
     }

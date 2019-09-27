@@ -55,7 +55,6 @@ namespace rockPaper
 
                 default:
                     break;
-
             }
         }
         public void PlayGame()
@@ -65,14 +64,16 @@ namespace rockPaper
                 gesture results = player1.ChooseGesture();
                 gesture results2 = player2.ChooseGesture();
                 if (results.IDList[1] == results2.IDList[1])
-                {
+                { 
+                    Console.WriteLine("Player 1 used" + results.IDList[0]);
+                    Console.WriteLine("Player 2 used" + results2.IDList[0]);
                     Console.WriteLine("tie");
-
+                   
                 }
                 else if (results.IDList[0] == results2.IDList[1] || results.IDList[0] == results2.IDList[2])
                 {
-                    Console.WriteLine("Player 1 used" + results);
-                    Console.WriteLine("Player 2 used" + results2);
+                    Console.WriteLine("Player 1 used" + results.IDList[0]);
+                    Console.WriteLine("Player 2 used" + results2.IDList[0]);
                     Console.WriteLine("player 1 won");
                     
 
@@ -89,24 +90,22 @@ namespace rockPaper
                 {
                     Console.WriteLine("  ");
                     Console.WriteLine("player 1 wins");
+                    PlayAgain();
                     break;
                 }
                 if (Player2Win == 3)
                 {
                     Console.WriteLine("  ");
                     Console.WriteLine("player 2 wins");
+                    PlayAgain();
                     break; 
                 }
 
             } while (Player1Win< 2||Player2Win<2);
             
-
         }
-
-       
         public void DisplayRuleSet()
         {
-         
          
           switch (PromptFor("do you want too see the rules,(yes)(no)"))
             {
@@ -122,20 +121,29 @@ namespace rockPaper
                     break;
                 
                 default:
+                    DisplayRuleSet();
                     break;
 
             }
         } 
       
-        // establish wether they want to play BOT or player
-        // ask if they need to see rules 
-        //start game 
-        // hold the list of avalible throws 
-        //keep up with and compare throws  
-        //keep up with wins 
-        //if win limit is reached end game 
-        //declare winner 
-        //display wins for both players?
+        public void PlayAgain()
+        {
+           switch (PromptFor("play again?"))
+            {
+                case "yes":
+                    AskForPlayerCount();
+                 break;
+
+                case "no":
+                    Console.WriteLine("Ok Bye");
+                break;
+
+                default:
+                  PlayAgain();
+                    break; 
+            }
+        }
     
     }
 }

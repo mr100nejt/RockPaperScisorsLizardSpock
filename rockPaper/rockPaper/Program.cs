@@ -12,7 +12,6 @@ namespace rockPaper
         {
                     game RockPaper = new game();
                    
-             
         }
     }
 }

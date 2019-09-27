@@ -14,27 +14,29 @@ namespace rockPaper
         public gesture Lizzard = new lizzard();
         public gesture Spock = new spock();
         public List<gesture> actions;
+        private Random randomNumber; 
         public Computer()
         {
             MakeListOfGestures();
+            randomNumber = new Random(); 
         }
         public List<gesture> MakeListOfGestures()
         {
             actions = new List<gesture>() { Rock, Paper, Scisors, Lizzard, Spock };
             return actions;
         }
-        public int RandomChoice()
-        {
-          return  RandomNumber(0, 5);
-        }
-        public int RandomNumber(int min, int max)
+       
+        public int RandomNumber()
         {
             Random random = new Random();
-            return random.Next(min, max);
+            return random.Next(actions.Count - 1);
         }
         public override gesture ChooseGesture()
         {
-            return actions[RandomChoice()];
+
+            
+            System.Threading.Thread.Sleep(000);
+            return actions[RandomNumber()];
         }
 
 

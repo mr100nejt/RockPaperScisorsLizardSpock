@@ -16,7 +16,7 @@ namespace rockPaper
         public override void EstablishID()
         {
             LoseID1 = " Paper";
-            LoseID2 = " Lizzard";
+            LoseID2 = " Lizard";
             ID = " Spock";
              IDList = new List<string>() { ID, LoseID1, LoseID2 };
         }

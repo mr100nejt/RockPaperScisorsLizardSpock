@@ -11,10 +11,9 @@ namespace rockPaper
         public List<string> IDList;
             public gesture()
             {
-            EstablishID();
+                 EstablishID();
                  
             }
-        
       
          public abstract void EstablishID();
     }
