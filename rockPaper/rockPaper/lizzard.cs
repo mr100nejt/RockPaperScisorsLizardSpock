@@ -8,16 +8,16 @@ namespace rockPaper
 {
     class lizzard : gesture
     {
-        public int ID;
-        public int LoseID1;
-        public int LoseID2;
-       
+        public string ID;
+        public string LoseID1;
+        public string LoseID2;
+
         public override void EstablishID()
         {
-            LoseID1 = 111;
-            LoseID2 = 333;
-            ID = 444;
-             IDList = new List<int>() { ID, LoseID1, LoseID2 };
+            LoseID1 = " Rock";
+            LoseID2 = " Scisors";
+            ID = " Lizzard";
+             IDList = new List<string>() { ID, LoseID1, LoseID2 };
         }
     }
 }

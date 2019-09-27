@@ -9,16 +9,16 @@ namespace rockPaper
     class spock : gesture
     {
 
-        public int ID;
-        public int LoseID1;
-        public int LoseID2;
-       
+        public string ID;
+        public string LoseID1;
+        public string LoseID2;
+
         public override void EstablishID()
         {
-            LoseID1 = 222;
-            LoseID2 = 444;
-            ID = 555;
-             IDList = new List<int>() { ID, LoseID1, LoseID2 };
+            LoseID1 = " Paper";
+            LoseID2 = " Lizzard";
+            ID = " Spock";
+             IDList = new List<string>() { ID, LoseID1, LoseID2 };
         }
     }
 }

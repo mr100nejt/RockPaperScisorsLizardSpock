@@ -8,7 +8,7 @@ namespace rockPaper
 {
     abstract class gesture
     {
-        public List<int> IDList;
+        public List<string> IDList;
             public gesture()
             {
             EstablishID();

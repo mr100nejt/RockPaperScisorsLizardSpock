@@ -80,14 +80,25 @@ namespace rockPaper
                 }
                 else if (results2.IDList[0] == results.IDList[1] || results2.IDList[0] == results.IDList[2])
                 {
-                    Console.WriteLine("Player 1 used" + results);
-                    Console.WriteLine("Player 2 used" + results2);
+                    Console.WriteLine("Player 1 used" + results.IDList[0]);
+                    Console.WriteLine("Player 2 used" + results2.IDList[0]);
                     Console.WriteLine("player 2 won");
                     Player2Win++;
                 }
+                if(Player1Win == 3)
+                {
+                    Console.WriteLine("  ");
+                    Console.WriteLine("player 1 wins");
+                    break;
+                }
+                if (Player2Win == 3)
+                {
+                    Console.WriteLine("  ");
+                    Console.WriteLine("player 2 wins");
+                    break; 
+                }
 
-
-            } while (Player1Win< 4||Player2Win<4);
+            } while (Player1Win< 2||Player2Win<2);
             
 
         }

@@ -8,17 +8,17 @@ namespace rockPaper
 {
     class paper : gesture
     {
-        public int ID;
-        public int LoseID1;
-        public int LoseID2;
-      
+        public string ID;
+        public string LoseID1;
+        public string LoseID2;
+
 
         public override void EstablishID()
         {
-            LoseID1 = 333;
-            LoseID2 = 444;
-            ID = 222;
-             IDList = new List<int>() { ID, LoseID1, LoseID2 };
+            LoseID1 = " Scisors";
+            LoseID2 = " Lizzard";
+            ID = " Paper";
+             IDList = new List<string>() { ID, LoseID1, LoseID2 };
         }
     }
 }
