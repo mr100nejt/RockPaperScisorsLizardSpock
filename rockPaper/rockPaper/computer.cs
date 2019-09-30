@@ -35,7 +35,7 @@ namespace rockPaper
         {
 
             
-            System.Threading.Thread.Sleep(000);
+            System.Threading.Thread.Sleep(1000);
             return actions[RandomNumber()];
         }
 
